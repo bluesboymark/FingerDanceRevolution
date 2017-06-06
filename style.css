@@ -1,0 +1,55 @@
+img {
+  display: block;
+  margin: 0 auto;
+  height: 100px;
+  width: auto;
+}
+.title {
+  text-align: center;
+}
+.subtitle {
+  text-align: center;
+}
+
+.prompt {
+  width: 70%;
+  height: 50px;
+  border: 3px solid black;
+  margin: 20px auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.player1 {
+  float: left;
+}
+.player2 {
+  float: right;
+}
+.monitor1 {
+  width: 30%;
+  height: 50px;
+  border: 3px solid black;
+  margin: 20px auto;
+  border-radius: 10px;
+  float:left;
+}
+
+.monitor2 {
+  width: 30%;
+  height: 50px;
+  border: 3px solid black;
+  margin: 20px auto;
+  border-radius: 10px;
+  float:right;
+}
+
+
+
+button {
+  width:300px;
+  height:50px;
+  font-size: 30px;
+  display: block;
+  margin: 0 auto;
+}
