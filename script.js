@@ -4,7 +4,6 @@ var comboArray = [];
 var player1Array = [];
 var player2Array = [];
 var gameStarted = false
-
 // Random arrow generator after button is pressed
 $('.playButton').on('click', displayArrows)
 
@@ -18,12 +17,16 @@ function displayArrows(){
   gameStarted = true
   buttonListener()
   var comboString = ""
-  for (i=0; i < 4; i++) {
+  for (i=0; i < 2; i++) {
     var arrowsIndex = randomArrowsIndex()
     comboArray.push(arrows[arrowsIndex].keycode)
     comboString += arrows[arrowsIndex].text + " "
     $('.prompt').text(comboString)
     $('.playButton').fadeOut()
+    if ($('.player1lives').text() == 0 || $('.player2lives').text() == 0) {
+      $('.player1lives').text(3)
+      $('.player2lives').text(3)
+    }
   }
 }
 
@@ -72,7 +75,6 @@ function buttonListener () {
         player2Array.push(39)
       }
       checkRoundWinner();
-      checkGameWinner();
     }
   })
 }
@@ -84,13 +86,14 @@ function checkRoundWinner () {
     clearData()
     $('.playButton').fadeIn()
     $("body").off("keydown")
-  }
-  else if (player2Array.join() === comboArray.join()) {
+    checkGameWinner ()
+  }else if (player2Array.join() === comboArray.join()) {
     alert("Player 2 wins the round! Player 1 loses 1 life")
     $('.player1lives').text($('.player1lives').text()-1)
     clearData()
     $('.playButton').fadeIn()
     $("body").off("keydown")
+    checkGameWinner ()
   }
 }
 
@@ -103,12 +106,15 @@ function clearData(){
 }
 
 function checkGameWinner () {
-  if ($('.player1lives') = 0) {
+  if ($('.player1lives').text() == 0) {
     alert("Player 2 wins the game!")
+    $("body").off("keydown")
   }
-  else if ($('.player2lives') = 0) {
+  else if ($('.player2lives').text() == 0) {
     alert("Player 1 wins the game!")
+    $("body").off("keydown")
   }
+
 }
 
 
