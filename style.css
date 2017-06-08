@@ -1,3 +1,7 @@
+body {
+  background-image: url("images/discobackground.gif");
+  background-size: cover;
+}
 img {
   display: block;
   margin: 0 auto;
@@ -7,13 +11,15 @@ img {
 .gametitle {
   text-align: center;
   font-family: 'Bungee Shade', cursive;
-  font-size: 50px;
+  font-size: 45px;
   margin: 0 auto;
+  color: pink;
 }
 .gamesubtitle {
   text-align: center;
   font-family: 'Bungee', cursive;
   font-size:20px;
+  color: pink;
 }
 
 .prompt {
@@ -25,55 +31,69 @@ img {
   text-align: center;
   font-family: 'Bungee', cursive;
   font-size: 30px;
+  background-color: pink;
 }
 
 .player1 {
   float: left;
-  color:#B40800;
+  /*color:#B40800;*/
+  color:pink;
   font-family: 'Bungee Shade', cursive;
+  margin: 0 auto;
+  width:auto;
 }
 .player2 {
   float: right;
-  color:#2131B4;
+  /*color:#2131B4;*/
+  color:pink;
   font-family: 'Bungee Shade', cursive;
+  margin: 0 auto;
 }
 .monitor1 {
-  width: 30%;
+  width: auto;
   height: 50px;
-  border: 3px solid black;
-  margin: 20px auto;
+  /*border: 3px solid black;*/
+  color: black;
+  margin: 20px 10px;
   border-radius: 10px;
   float:left;
   font-family: 'Bungee', cursive;
   font-size: 30px;
+  background-color: pink;
 }
 
 .monitor2 {
-  width: 30%;
+  width: auto;
   height: 50px;
-  border: 3px solid black;
+  /*border: 3px solid black;*/
+  color:black;
   margin: 20px auto;
   border-radius: 10px;
   float:right;
   font-family: 'Bungee', cursive;
   font-size: 30px;
+  background-color: pink;
 }
 
 
 
 button {
-  width:400px;
+  width:auto;
   height:50px;
   font-family: 'Bungee', cursive;
-  font-size: 30px;
+  font-size: 25px;
+  font-weight: lighter;
   display: block;
   margin: 0 auto;
   border-radius: 30px;
-  color:white;
+  color:pink;
   background-color: #138323;
 }
 
-.redstand {
-  height: 210px;
+.redchar {
+  height: 240px;
+}
+.bluechar {
+  height: 240px;
   width: auto;
 }

@@ -5,12 +5,14 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet">
   </head>
   <body>
     <!-- Header -->
-    <img src="logo.png">
-    <h1 class="gametitle">Finger Dance Revolution!</h1>
+    <embed src="music/music.mp3" autostart="true" loop="true"
+    width="1" height="0">
+    </embed>
+      <img class="logo" src="images/logo.png">
+      <h1 class="gametitle">Finger Dance Revolution!</h1>
     <h2 class="gamesubtitle">A 2-player Competitive Finger Dance Game</h2>
 
     <!-- Game board -->
@@ -21,28 +23,33 @@
       </div>
 
       <!-- Player 1 -->
-      <div class="player1">
-        <h2 class="player1title">Player 1</h2>
-        <h2>lives: <span class="player1lives" >3</span> </h2>
-        <img class="redstand" src="images/redstand.gif" alt="">
-      </div>
-      <!-- Player 2 -->
-      <div class="player2">
-        <h2 class="player2title">Player 2</h2>
-        <h2>lives: <span class="player2lives">3</span></h2>
-        <img class="redstand" src="images/bluestand.png" alt="">
-      </div>
-
-      <!-- Monitor 1 -->
       <div class="monitor1">
       </div>
+      <div class="player1">
+        <!-- Monitor 1 -->
+        <h2 class="player1title">Player 1</h2>
+        <h2>lives: <span class="player1lives" >3</span> </h2>
+
+        <img class="redchar" src="images/redstand.gif" alt="">
+      </div>
+      <!-- Player 2 -->
       <!-- Monitor 2 -->
       <div class="monitor2">
       </div>
+      <div class="bluechar">
+      <div class="player2">
+        <h2 class="player2title">Player 2</h2>
+        <h2>lives: <span class="player2lives">3</span></h2>
+          <img class="bluechar" src="images/bluestand.gif" alt="">
+        </div>
+      </div>
+
+
+
 
       <!-- Button -->
       <div class="playButton">
-        <button>Click to Play!</button>
+        <button>PRESS ENTER OR CLICK HERE TO PLAY!</button>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
