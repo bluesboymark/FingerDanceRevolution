@@ -5,7 +5,8 @@ var player1Array = [];
 var player2Array = [];
 var gameStarted = false
 // Random arrow generator after button is pressed
-$('.prompt').hide()
+// $('.prompt').hide()
+$('.prompt').css({ opacity: 0 });
 $('.playButton').on('click', displayArrows)
 $(document).keypress(function(e) {
     if (e.keyCode === 13) {
@@ -28,7 +29,7 @@ function randomArrowsIndex(){
 // display arrow function
 function displayArrows(){
   gameStarted = true
-  $('.prompt').show()
+  $('.prompt').css({ opacity: 1 });
   $(".bluechar").attr("src","images/bluestatic.png")
   $(".redchar").attr("src","images/redstatic.png")
   buttonListener()
@@ -102,8 +103,10 @@ function buttonListener () {
 
       if(player2Array[player2Array.length-1] != comboArray[player2Array.length-1]){
         looseLife("player2")
+        checkGameWinner ()
       }else if(player1Array[player1Array.length-1] != comboArray[player1Array.length-1]){
         looseLife("player1")
+        checkGameWinner ()
       }
       checkRoundWinner ();
     }

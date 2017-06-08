@@ -36,19 +36,26 @@ img {
 
 .player1 {
   float: left;
-  /*color:#B40800;*/
   color:pink;
   font-family: 'Bungee Shade', cursive;
   margin: 0 auto;
   width:auto;
+  text-align: center;
 }
 .player2 {
   float: right;
-  /*color:#2131B4;*/
   color:pink;
   font-family: 'Bungee Shade', cursive;
-  margin: 0 auto;
+  margin: 0;
+  width:auto;
+  text-align: center;
 }
+/*.player2title {
+  float:right;
+}
+.player2livesh2 {
+  float:right;
+}*/
 .monitor1 {
   width: auto;
   height: 50px;
@@ -95,5 +102,4 @@ button {
 }
 .bluechar {
   height: 240px;
-  width: auto;
 }
