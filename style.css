@@ -110,3 +110,14 @@ button {
   background-color: pink;
   text-align: center;
 }
+
+.instructions {
+  width: 37%;
+  color:black;
+  margin: 20px auto;
+  border-radius: 10px;
+  font-family: 'Bungee', cursive;
+  font-size: 20px;
+  background-color: pink;
+  text-align: center;
+}
