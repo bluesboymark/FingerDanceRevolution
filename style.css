@@ -1,6 +1,7 @@
 body {
   background-image: url("images/discobackground.gif");
   background-size: cover;
+  margin: 0 auto;
 }
 img {
   display: block;
@@ -50,12 +51,7 @@ img {
   width:auto;
   text-align: center;
 }
-/*.player2title {
-  float:right;
-}
-.player2livesh2 {
-  float:right;
-}*/
+
 .monitor1 {
   width: auto;
   height: 50px;
@@ -81,8 +77,6 @@ img {
   font-size: 30px;
   background-color: pink;
 }
-
-
 
 button {
   width:auto;

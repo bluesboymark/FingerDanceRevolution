@@ -4,8 +4,7 @@ var comboArray = [];
 var player1Array = [];
 var player2Array = [];
 var gameStarted = false
-// Random arrow generator after button is pressed
-// $('.prompt').hide()
+
 $('.prompt').css({ opacity: 0 });
 $('.playButton').on('click', displayArrows)
 $(document).keypress(function(e) {
@@ -13,20 +12,11 @@ $(document).keypress(function(e) {
         displayArrows()
     }
 });
-// generate random arrow index
+
 function randomArrowsIndex(){
   return Math.floor(Math.random() * arrows.length);
 }
 
-// function compareArrays () {
-//   if (player1Array[i] == comboArray[i] || player2Array[i] == comboArray[i]) {
-//     buttonListener()
-//   }
-//   else {checkRoundWinner()
-//   }
-// }
-
-// display arrow function
 function displayArrows(){
   gameStarted = true
   $('.prompt').css({ opacity: 1 });
@@ -164,14 +154,4 @@ function checkGameWinner () {
     alert("Player 1 wins the game!")
     $("body").off("keydown")
   }
-
 }
-
-
-// var turn = 0
-// on keypress or keydown or keyup:
-// check if the right arrow was pressed for this turn
-// increment turn by 1
-
-
-// var randomArrowsElement = arrows[randomArrowsIndex];
