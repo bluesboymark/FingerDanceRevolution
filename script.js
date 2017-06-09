@@ -95,6 +95,12 @@ function buttonListener () {
         player1Array.push(39)
         $(".redchar").attr("src","images/redright.png")
       }
+      if (event.keyCode === 13) {
+          return false;
+      }
+      if (event.keyCode === 32) {
+          return false;
+      }
       // if (player1Array.length == 0) {
       //   $('.monitor1').hide()
       // } else if (player2Array.length == 0) {
