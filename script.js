@@ -8,10 +8,13 @@ var gameStarted = false
 $('.prompt').css({ opacity: 0 });
 $('.playButton').on('click', displayArrows)
 $(document).keypress(function(e) {
-    if (e.keyCode === 13) {
+    if (e.keyCode === 13 || e.keyCode === 32) {
         displayArrows()
     }
 });
+
+$('.monitor1').hide()
+$('.monitor2').hide()
 
 function randomArrowsIndex(){
   return Math.floor(Math.random() * arrows.length);
@@ -20,6 +23,7 @@ function randomArrowsIndex(){
 function displayArrows(){
   gameStarted = true
   $('.prompt').css({ opacity: 1 });
+  $('.alert').css({ opacity: 0 });
   $(".bluechar").attr("src","images/bluestatic.png")
   $(".redchar").attr("src","images/redstatic.png")
   buttonListener()
@@ -90,6 +94,15 @@ function buttonListener () {
         player1Array.push(39)
         $(".redchar").attr("src","images/redright.png")
       }
+      if (player1Array.length > 0) {
+        $('.monitor1').show()
+      } else if (player2Array.length > 0) {
+        $('.monitor2').show()
+      } else {
+        $('.monitor1').hide()
+        $('.monitor2').hide()
+      }
+
 
       if(player2Array[player2Array.length-1] != comboArray[player2Array.length-1]){
         looseLife("player2")
@@ -105,14 +118,18 @@ function buttonListener () {
 
 function checkRoundWinner () {
   if (player1Array.join() === comboArray.join() && player1Array.join()) {
-    alert("Player 1 wins the round! Player 2 loses 1 life")
+    // alert("Player 1 wins the round! Player 2 loses 1 life")
+    $('.alert').css({ opacity: 1 });
+    $('.alert').text("Player 1 wins the round! Player 2 loses 1 life")
     $('.player2lives').text($('.player2lives').text()-1)
     clearData()
     $('.playButton').fadeIn()
     $("body").off("keydown")
     checkGameWinner ()
   }else if (player2Array.join() === comboArray.join() && player2Array.join()) {
-    alert("Player 2 wins the round! Player 1 loses 1 life")
+    // alert("Player 2 wins the round! Player 1 loses 1 life")
+    $('.alert').css({ opacity: 1 });
+    $('.alert').text("Player 2 wins the round! Player 1 loses 1 life")
     $('.player1lives').text($('.player1lives').text()-1)
     clearData()
     $('.playButton').fadeIn()
@@ -123,13 +140,17 @@ function checkRoundWinner () {
 
 function looseLife(player){
   if (player == "player2") {
-    alert("Player 2 made a mistake! Player 2 loses 1 life")
+    // alert("Player 2 made a mistake! Player 2 loses 1 life")
+    $('.alert').css({ opacity: 1 });
+    $('.alert').text("Player 2 made a mistake! Player 2 loses 1 life")
     $('.player2lives').text($('.player2lives').text()-1)
     clearData()
     $('.playButton').fadeIn()
     $("body").off("keydown")
   }else if (player == "player1") {
-    alert("Player 1 made a mistake! Player 1 loses 1 life")
+    // alert("Player 1 made a mistake! Player 1 loses 1 life")
+    $('.alert').css({ opacity: 1 });
+    $('.alert').text("Player 2 made a mistake! Player 2 loses 1 life")
     $('.player1lives').text($('.player1lives').text()-1)
     clearData()
     $('.playButton').fadeIn()
@@ -143,15 +164,21 @@ function clearData(){
   player2Array = [];
   $('.monitor1').text('');
   $('.monitor2').text('');
-}
+  $('.monitor1').hide()
+  $('.monitor2').hide()
+  }
 
 function checkGameWinner () {
   if ($('.player1lives').text() == 0) {
-    alert("Player 2 wins the game!")
+    // alert("Player 2 wins the game!")
+    $('.alert').css({ opacity: 1 });
+    $('.alert').text("Player 2 wins the game!")
     $("body").off("keydown")
   }
   else if ($('.player2lives').text() == 0) {
-    alert("Player 1 wins the game!")
+    // alert("Player 1 wins the game!")
+    $('.alert').css({ opacity: 1 });
+    $('.alert').text("Player 1 wins the game!")
     $("body").off("keydown")
   }
 }

@@ -2,6 +2,7 @@ body {
   background-image: url("images/discobackground.gif");
   background-size: cover;
   margin: 0 auto;
+  overflow: hidden;
 }
 img {
   display: block;
@@ -63,6 +64,7 @@ img {
   font-family: 'Bungee', cursive;
   font-size: 30px;
   background-color: pink;
+  border: 3px solid black;
 }
 
 .monitor2 {
@@ -76,6 +78,7 @@ img {
   font-family: 'Bungee', cursive;
   font-size: 30px;
   background-color: pink;
+  border: 3px solid black;
 }
 
 button {
@@ -96,4 +99,14 @@ button {
 }
 .bluechar {
   height: 240px;
+}
+.alert {
+  width: 50%;
+  color:black;
+  margin: 20px auto;
+  border-radius: 10px;
+  font-family: 'Bungee', cursive;
+  font-size: 20px;
+  background-color: pink;
+  text-align: center;
 }

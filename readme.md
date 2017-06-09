@@ -1,6 +1,7 @@
 ![logo](images/logo.png)
 #Finger Dance Revolution!
 ##A 2-Player Finger to Finger Dance Game
+![screenshot] (images/gamescreenshot.png)
 
 Finger Dance Revolution is a game in which you and your opponent fight head to head with the goal of being the fastest to finish the prompted moves by using the keyboard. 
 
@@ -52,7 +53,7 @@ The languages used to build Finger Dance Revolution includes: HTML, CSS, Javascr
 
 ##Dream Feature
 
-+ Pop up alerts that do not stop the moving background image and the background music.
++ Players can choose stage (background image) and background music.
 
 ##Credits
 
