@@ -157,7 +157,7 @@ function looseLife(player){
   if (player == "player2") {
     // alert("Player 2 made a mistake! Player 2 loses 1 life")
     $('.alert').css({ opacity: 1 });
-    $('.alert').text("Player 1 made a mistake! Player 2 loses 1 life")
+    $('.alert').text("Player 2 made a mistake! Player 2 loses 1 life")
     $('.player2lives').text($('.player2lives').text()-1)
     clearData()
     $('.playButton').show();
@@ -165,7 +165,7 @@ function looseLife(player){
   }else if (player == "player1") {
     // alert("Player 1 made a mistake! Player 1 loses 1 life")
     $('.alert').css({ opacity: 1 });
-    $('.alert').text("Player 2 made a mistake! Player 2 loses 1 life")
+    $('.alert').text("Player 1 made a mistake! Player 1 loses 1 life")
     $('.player1lives').text($('.player1lives').text()-1)
     clearData()
     $('.playButton').show();
